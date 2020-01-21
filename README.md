@@ -17,3 +17,4 @@ Semana OmniStack 10.0 da Rocketseat
   <h2> Treinamento ministrado pela Rocketseat </h2>
   
   <p>Aulas ministradas por: Diego Fernandes</p>
+
