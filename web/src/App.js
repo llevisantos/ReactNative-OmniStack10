@@ -7,7 +7,7 @@ import './Sidebar.css';
 import './Main.css';
 
 import DevForm from './components/DevForm';
-import DevItem from './components/Devitem';
+import DevItem from './components/DevItem';
 
 function App() {
   const [devs, setDevs] = useState([]);
@@ -19,33 +19,32 @@ function App() {
       setDevs(response.data);
     }
     loadDevs();
-
   }, []);
   
   async function handleAddDev(data){
 
-    const response = await api.post('/devs', data)
+    const response = await api.post('/devs', data);
 
-    setDevs([...devs, response.data]);
+    setDevs([...devs, response.data])
 
   }
 
   return (
     <div id="app">
+      
       <aside>
         <strong>CADASTRAR</strong>
         <DevForm onSubmit={handleAddDev}/>
       </aside>
+
       <main>
         <ul>
           {devs.map(dev => (
             <DevItem key={dev._id} dev ={dev} />
-
           ))}
-          
-
         </ul>
       </main>
+
     </div>
   );
 }

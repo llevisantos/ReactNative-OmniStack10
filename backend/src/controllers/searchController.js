@@ -3,7 +3,6 @@ const parseStringAsArray = require('../utils/parseStringAsArray');
 
 module.exports={
     async index(request, response){
-        console.log(request.query);
 
         const {latitude, longitude, conhecimentos} = request.query;
 
@@ -15,7 +14,7 @@ module.exports={
             },
             location: {
                 $near: {
-                $geometry:{
+                $geometry: {
                     type: 'Point',
                     coordinates: [longitude, latitude],
                  },

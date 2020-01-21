@@ -29,7 +29,7 @@ module.exports = {
         const location = {
             type: 'Point',
             coordinates: [longitude, latitude],
-        };
+        }
     
         dev = await Dev.create({
             github_username,
@@ -39,8 +39,7 @@ module.exports = {
             conhecimentos: conhecimentosArray,
             location,
         })
-
-        }     
+    }  
     
         return response.json(dev);
     },
